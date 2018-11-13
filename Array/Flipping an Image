@@ -1,0 +1,16 @@
+class Solution {
+public:
+    vector<vector<int>> flipAndInvertImage(vector<vector<int>>& A) {
+        vector<vector<int>>::iterator it1;
+        vector<int>::iterator it2;
+        for(it1=A.begin();it1!=A.end();it1++)
+        {
+            reverse((*it1).begin(),(*it1).end());
+            for(it2=(*it1).begin();it2!=(*it1).end();it2++)
+            {
+                (*it2)=(*it2)^1;
+            }
+        }
+        return A;
+    }
+};
